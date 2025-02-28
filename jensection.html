@@ -7,7 +7,7 @@
 </head>
     <style>
         body {
-            max-width: 800px;
+            max-width: 1200px;
             margin: auto;
             background-color: #fff;
             padding: 20px;
@@ -52,12 +52,23 @@
             background-color: #002147; /* Oxford Blue */
             padding: 20px; /* Adds spacing inside the header */
         }
+        .progressbarstyle{
+            margin: 10px;
+        }
+
+        .buttoncolouroxford{
+          background-color: #002147;
+          border: #002147;
+        }
     </style>
 </head>
 <body>
     <header class="oxford-blue-header header">
         <img src="oxlogo-rect-border.svg" alt="logo" class="logo">
     </header>
+    <div class="progress progressbarstyle" role="progressbar" aria-label="Default striped example" aria-valuenow="35" aria-valuemin="0" aria-valuemax="100">
+        <div class="progress-bar progress-bar-striped" style="width: 35%">35%</div>
+      </div>
     <fieldset class="form-section">
         <legend>Section M: Proposed funding arrangements</legend>
         <p>If you are not offered a scholarship by the University, please indicate the main source(s) of funding you plan to use to fund your fees and living expenses. <u>This will not affect the assessment of your application in any way.</u> Please do not include any Oxford scholarships.</p>
@@ -223,8 +234,8 @@
     </fieldset>
     <div class="d-grid gap-2 d-md-block">
         <center>  
-            <input class="btn btn-primary" type="reset" value="Reset">
-            <a class="btn btn-primary" href="jensection2.html" type="submit">Next</a>
+            <input class="btn btn-primary buttoncolouroxford" type="reset" value="Reset">
+            <a class="btn btn-primary buttoncolouroxford" href="jensection2.html" type="submit">Next</a>
         </center>
     </div>
     

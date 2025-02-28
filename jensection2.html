@@ -7,9 +7,9 @@
 </head>
     <style>
         body {
-            max-width: 800px;
+          max-width: 1200px;
             margin: auto;
-            background-color: #fff;
+            background-color: #F8F9FA;
             padding: 20px;
             font-family: Arial, sans-serif;
             color: #000;
@@ -57,12 +57,19 @@
             padding: 20px; /* Adds spacing inside the header */
         }
 
+        .buttoncolouroxford{
+          background-color: #002147;
+          border: #002147;
+        }
+
     </style>
 </head>
 <body>
     <header class="oxford-blue-header header">
         <img src="oxlogo-rect-border.svg" alt="logo" class="logo">
     </header>
+    <form>
+    <fieldset class="form-section">
     <legend>Section N: Supporting documents checklist</legend>
     <table class="table table-bordered td">
         <thead>
@@ -138,7 +145,7 @@
             <th class="text-start" scope="row">
                 <label for="scholarshipSelect" class="form-label">Scholarship application(s)</label>
                 <p>If you are applying for one or more University of Oxford scholarships listed in Section M that require you to submit a supporting statement to complete your scholarship application, please add a separate supporting statement for each scholarship you have ticked. You must read the relevant scholarship profile(s) (www.ox.ac.uk/feesandfunding/prospectivegrad/scholarships) for full details about the awards, the required format for your supporting statement and the eligibility requirements before completing your scholarship application.</p>
-                <p>Number of scholarship applications being added:<input class="small-input form-control" type="number" id="noScholarshipAdded" min="0"></p>
+                <p class="d-flex">Number of scholarship applications being added:<input class="small-input form-control" type="number" id="noScholarshipAdded" min="0" style="width: 200px; margin-left: 25px;"></p>
             
             </th>
             <td class="text-center">
@@ -148,6 +155,7 @@
     
         </tbody>
       </table>
+    </fieldset>
     
     <fieldset class="form-section">
         <legend>Section O: Application fee payment</legend>
@@ -161,12 +169,16 @@
             <li>We will contact you by email if there is any issue with your payment.</li>
         </ol>
 
-        <div class="form-group">
-            <label for="orderNumber">OXF</label>
+        <div class="d-flex justify-content-center align-items-center flex-column text-center">
+        <div class="form-group" >
+          <div class="input-group" style="width: 300px;">
+            <div class="input-group-text border border-black" for="orderNumber"><strong>OXF</strong></div>
             <input type="text" class="form-control" id="orderNumber" placeholder="Enter order number">
         </div>
-
-        <p>It is acceptable for someone else to pay the application fee on your behalf. When creating the account, they should enter their own details rather than those of the applicant. Please advise them that once they have clicked "Add to Basket" they will be required to provide some personal information about you to allow the Graduate Admissions Office to match the payment to your application: your name, date of birth and the full title of the course and course code to which you are applying.</p>
+        </div>
+        </div>
+        <br>
+        <p class="d-flex justify-content-start">It is acceptable for someone else to pay the application fee on your behalf. When creating the account, they should enter their own details rather than those of the applicant. Please advise them that once they have clicked "Add to Basket" they will be required to provide some personal information about you to allow the Graduate Admissions Office to match the payment to your application: your name, date of birth and the full title of the course and course code to which you are applying.</p>
 
         <div class="accordion" id="accordionPanelsStayOpenExample">
             <div class="accordion-item">
@@ -270,9 +282,10 @@
   
     <div class="d-grid gap-2 d-md-block">
         <center>  
-            <input class="btn btn-primary" type="reset" value="Reset">
-            <a class="btn btn-primary" href="jensection3.html" type="submit">Next</a>
+            <input class="btn btn-primary buttoncolouroxford" type="reset" value="Reset">
+            <a class="btn btn-primary buttoncolouroxford" href="jensection3.html" type="submit">Next</a>
         </center>
     </div>
+  </form>
 </body>
 </html>
