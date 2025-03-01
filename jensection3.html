@@ -69,10 +69,13 @@
         .progressbarstyle{
             margin: 10px;
         }
-        .buttoncolouroxford{
-          background-color: #002147;
-          border: #002147;
-          width: 80px;
+          .nav-btn {
+            margin-top: 20px;
+            text-align: center;
+        }
+        .btn-primary {
+             background-color: #002147 !important;
+              border-color: #002147 !important;
         }
     </style>
 </head>
@@ -378,11 +381,9 @@
             <input type="text" class="form-control" id="printName" required>
         </div>
     </fieldset>
-    <div class="d-grid gap-2 d-md-block">
-        <center>  
-            <button class="btn btn-warning" type="reset">Reset</button>
-            <button class="btn btn-primary buttoncolouroxford" type="submit">Next</button>
-        </center>
+     <div class="nav-btn">
+        <input class="btn btn-warning" type="reset" value="Reset">
+        <a href="piksection.html" class="btn btn-primary">Continue to Next Section</a>
     </div>
     </form>
 </fieldset>
