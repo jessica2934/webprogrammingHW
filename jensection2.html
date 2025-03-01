@@ -27,6 +27,9 @@
             width: 40px;
             height: 40px;
         }
+        .table-bordered th.normal{
+          font-weight: normal;
+        }
 
         legend {
             font-weight: bold;
@@ -40,6 +43,7 @@
         }
         label.no-uppercase {
             text-transform: none;
+            font-weight: normal;
         }
         .form-control {
             border: 1px solid black;
@@ -56,10 +60,14 @@
             background-color: #002147; /* Oxford Blue */
             padding: 20px; /* Adds spacing inside the header */
         }
+        .progressbarstyle{
+            margin: 10px;
+        }
 
         .buttoncolouroxford{
           background-color: #002147;
           border: #002147;
+          width: 80px;
         }
 
     </style>
@@ -68,6 +76,9 @@
     <header class="oxford-blue-header header">
         <img src="oxlogo-rect-border.svg" alt="logo" class="logo">
     </header>
+    <div class="progress progressbarstyle border border-black" role="progressbar" aria-label="Default striped example" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100">
+      <div class="progress-bar progress-bar-striped" style="width: 45%">45%</div>
+    </div>
     <form>
     <fieldset class="form-section">
     <legend>Section N: Supporting documents checklist</legend>
@@ -80,76 +91,76 @@
         </thead>
         <tbody class="table-group-divider">
           <tr>
-            <th class="text-start" scope="row">Transcripts</th>
+            <th class="text-start normal" scope="row">Transcripts</th>
             <td class="text-center">
-                <input class="form-check-input border border-primary-subtle" style="align-items: end;"type="checkbox" value="" id="TranscriptsCheck">
+                <input class="form-check-input border border-black" style="align-items: end;"type="checkbox" value="" id="TranscriptsCheck">
         </td>
           </tr>
           <tr>
-            <th class="text-start" scope="row">CV/Résumé</th>
+            <th class="text-start normal" scope="row">CV/Résumé</th>
             <td class="text-center">
-                <input class="form-check-input border border-primary-subtle" style="align-items: end;"type="checkbox" value="" id="CVCheck">
+                <input class="form-check-input border border-black" style="align-items: end;"type="checkbox" value="" id="CVCheck">
         </td>
     
           </tr>
           <tr>
-            <th class="text-start" scope="row">Statement of purpose/Research proposal</th>
+            <th class="text-start normal" scope="row">Statement of purpose/Research proposal</th>
             <td class="text-center">
-                <input class="form-check-input border border-primary-subtle" style="align-items: end;"type="checkbox" value="" id="StatementCheck">
+                <input class="form-check-input border border-black" style="align-items: end;"type="checkbox" value="" id="StatementCheck">
         </td>
           </tr>
           <tr>
-            <th class="text-start" scope="row">Written work 1</th>
+            <th class="text-start normal" scope="row">Written work 1</th>
             <td class="text-center">
-                <input class="form-check-input border border-primary-subtle" style="align-items: end;"type="checkbox" value="" id="WW1Check">
+                <input class="form-check-input border border-black" style="align-items: end;"type="checkbox" value="" id="WW1Check">
         </td>
           </tr>
           <tr>
-            <th class="text-start" scope="row">Written work 2</th>
+            <th class="text-start normal" scope="row">Written work 2</th>
             <td class="text-center">
-                <input class="form-check-input border border-primary-subtle" style="align-items: end;"type="checkbox" value="" id="WW2Check">
+                <input class="form-check-input border border-black" style="align-items: end;"type="checkbox" value="" id="WW2Check">
         </td>
           </tr>
           <tr>
-            <th class="text-start" scope="row">If your course permits one longer piece of written work instead of two shorter pieces (you can check this in the How to Apply section for your course on its course page at <a href="https://www.graduate.ox.ac.uk/applicationguide" target="_blank">www.graduate.ox.ac.uk/applicationguide</a>), please tick this box</th>
+            <th class="text-start normal" scope="row">If your course permits one longer piece of written work instead of two shorter pieces (you can check this in the How to Apply section for your course on its course page at <a href="https://www.graduate.ox.ac.uk/applicationguide" target="_blank">www.graduate.ox.ac.uk/applicationguide</a>), please tick this box</th>
             <td class="text-center">
-                <input class="form-check-input border border-primary-subtle" style="align-items: end;"type="checkbox" value="" id="LongsentenceCheck">
+                <input class="form-check-input border border-black" style="align-items: end;"type="checkbox" value="" id="LongsentenceCheck">
         </td>
           </tr>
           <tr>
-            <th class="text-start" scope="row">Portfolio/audio-visual media/maths test/music scores</th>
+            <th class="text-start normal" scope="row">Portfolio/audio-visual media/maths test/music scores</th>
             <td class="text-center">
-                <input class="form-check-input border border-primary-subtle" style="align-items: end;"type="checkbox" value="" id="portfolioCheck">
+                <input class="form-check-input border border-black" style="align-items: end;"type="checkbox" value="" id="portfolioCheck">
         </td>
           </tr>
           <tr>
-            <th class="text-start" scope="row">English Language Test Result (e.g. TOEFL, IELTS, etc.)</th>
+            <th class="text-start normal" scope="row">English Language Test Result (e.g. TOEFL, IELTS, etc.)</th>
             <td class="text-center">
-                <input class="form-check-input border border-primary-subtle" style="align-items: end;"type="checkbox" value="" id="EnglishTestCheck">
+                <input class="form-check-input border border-black" style="align-items: end;"type="checkbox" value="" id="EnglishTestCheck">
         </td>
           </tr>
           <tr>
-            <th class="text-start" scope="row">GRE admissions test certificate(s)</th>
+            <th class="text-start normal" scope="row">GRE admissions test certificate(s)</th>
             <td class="text-center">
-                <input class="form-check-input border border-primary-subtle" style="align-items: end;"type="checkbox" value="" id="GRECheck">
+                <input class="form-check-input border border-black" style="align-items: end;"type="checkbox" value="" id="GRECheck">
         </td>
           </tr>
           <tr>
-            <th class="text-start" scope="row">Other items (please tick box(es) as appropriate)<p>If you ticked “Yes” to English Language Test Waiver, please add a brief letter outlining the reasons why you should be exempted ☐ from the requirement - see the Application Guide www.graduate.ox.ac.uk/applicationguide for further information. If you do not
+            <th class="text-start normal" scope="row">Other items (please tick box(es) as appropriate)<p>If you ticked “Yes” to English Language Test Waiver, please add a brief letter outlining the reasons why you should be exempted ☐ from the requirement - see the Application Guide www.graduate.ox.ac.uk/applicationguide for further information. If you do not
                 need to provide an English language test result or are not requesting a test waiver, please do not submit a document.</p></th>
-            <td class="text-center">
-                <input class="form-check-input border border-primary-subtle" style="align-items: end;"type="checkbox" value="" id="LongSentenceCheck2">
+            <td class="text-center normal">
+                <input class="form-check-input border border-black" style="align-items: end;"type="checkbox" value="" id="LongSentenceCheck2">
         </td>
           </tr>
           <tr>
-            <th class="text-start" scope="row">
+            <th class="text-start normal" scope="row">
                 <label for="scholarshipSelect" class="form-label">Scholarship application(s)</label>
-                <p>If you are applying for one or more University of Oxford scholarships listed in Section M that require you to submit a supporting statement to complete your scholarship application, please add a separate supporting statement for each scholarship you have ticked. You must read the relevant scholarship profile(s) (www.ox.ac.uk/feesandfunding/prospectivegrad/scholarships) for full details about the awards, the required format for your supporting statement and the eligibility requirements before completing your scholarship application.</p>
-                <p class="d-flex">Number of scholarship applications being added:<input class="small-input form-control" type="number" id="noScholarshipAdded" min="0" style="width: 200px; margin-left: 25px;"></p>
+                <p>If you are applying for one or more University of Oxford scholarships listed in Section M that require you to submit a supporting statement to complete your scholarship application, please add a separate supporting statement for each scholarship you have ticked. You must read the relevant scholarship profile(s) (<u>www.ox.ac.uk/feesandfunding/prospectivegrad/scholarships</u>) for full details about the awards, the required format for your supporting statement and the eligibility requirements before completing your scholarship application.</p>
+                <p class="d-flex"><strong>Number of scholarship applications being added:</strong><input class="small-input form-control" type="number" id="noScholarshipAdded" min="0" style="width: 200px; margin-left: 25px;"></p>
             
             </th>
             <td class="text-center">
-                <input class="form-check-input border border-primary-subtle" type="checkbox" value="" id="scholarshipCheck">
+                <input class="form-check-input border border-black" type="checkbox" value="" id="scholarshipCheck">
             </td>
         </tr>
     
@@ -180,7 +191,7 @@
         <br>
         <p class="d-flex justify-content-start">It is acceptable for someone else to pay the application fee on your behalf. When creating the account, they should enter their own details rather than those of the applicant. Please advise them that once they have clicked "Add to Basket" they will be required to provide some personal information about you to allow the Graduate Admissions Office to match the payment to your application: your name, date of birth and the full title of the course and course code to which you are applying.</p>
 
-        <div class="accordion" id="accordionPanelsStayOpenExample">
+        <div class="accordion" id="accordionPanelsStayOpenExample" style="margin:20px">
             <div class="accordion-item">
               <h2 class="accordion-header">
                 <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
@@ -258,31 +269,29 @@
 
         <h4>Application Fee Waiver:</h4>
         <div class="form-check">
-            <input class="form-check-input" type="radio" name="feeWaiver" id="noWaiver" value="no">
+            <input class="form-check-input border border-black" type="radio" name="feeWaiver" id="noWaiver" value="no">
             <label class="form-check-label" for="noWaiver">I do not need a fee waiver</label>
         </div>
-        <div class="form-check">
-            <input class="form-check-input" type="radio" name="feeWaiver" id="waiver" value="yes">
+        <div class="form-check" style="margin-bottom: 20px">
+            <input class="form-check-input border border-black" type="radio" name="feeWaiver" id="waiver" value="yes">
             <label class="form-check-label" for="waiver">I need a fee waiver</label>
         </div>
 
-        <div class="form-group">
             <div class="form-check">
-                <input class="form-check-input" type="checkbox" value="" id="confirmAfford">
+                <input class="form-check-input border border-black" type="checkbox" value="" id="confirmAfford">
                 <label class="form-check-label" for="confirmAfford">I confirm that I cannot afford to pay the application fee and would not be able to apply to the University without an application fee waiver.</label>
             </div>
-            <div class="form-check">
-                <input class="form-check-input" type="checkbox" value="" id="confirmEntry">
+            <div class="form-check" style="margin-bottom: 20px">
+                <input class="form-check-input border border-black" type="checkbox" value="" id="confirmEntry">
                 <label class="form-check-label" for="confirmEntry">I confirm that I will meet the entry requirements for my course as published on the course entry requirements page.</label>
             </div>
-        </div>
 
         <p>Please note that if you are applying for a course in one of the Centres for Doctoral Training (CDT) or Doctoral Training Partnership (DTP), you will be required to pay the application fee for the first application. You may, however, submit up to two further applications for related courses from a set of permitted options without paying additional application fees. Please see the Application Basics tab of the Guide <a href="www.ox.ac.uk/admissions/graduate/applying-to-oxford/application-guide" target="_blank">www.ox.ac.uk/admissions/graduate/applying-to-oxford/application-guide</a> for further information.</p>
     </fieldset>
   
     <div class="d-grid gap-2 d-md-block">
         <center>  
-            <input class="btn btn-primary buttoncolouroxford" type="reset" value="Reset">
+            <input class="btn btn-warning" type="reset" value="Reset">
             <a class="btn btn-primary buttoncolouroxford" href="jensection3.html" type="submit">Next</a>
         </center>
     </div>
