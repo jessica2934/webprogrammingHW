@@ -29,7 +29,7 @@
         }
         legend {
             font-weight: bold;
-            font-size: 14px;
+            font-size: 20px;
             text-transform: uppercase;
         }
         label {
@@ -48,6 +48,17 @@
             background-color: #002147; /* Oxford Blue */
             padding: 20px; /* Adds spacing inside the header */
         }
+         .nav-btn {
+            margin-top: 20px;
+            text-align: center;
+        }
+        .btn-primary {
+            background-color: #002147 !important;
+            border-color: #002147 !important;
+        }
+        .progressbarstyle{
+            margin: 10px;
+        }
 
     </style>
 </head>
@@ -56,9 +67,9 @@
         <img src="oxlogo-rect-border.svg" alt="logo" class="logo">
     </header>
 
-    <div class="progress" role="progressbar" aria-label="Default striped example" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100">
-        <div class="progress-bar progress-bar-striped" style="width: 10%"></div>
-      </div>
+    <div class="progress progressbarstyle border border-black"  role="progressbar" aria-label="Default striped example" aria-valuenow="5" aria-valuemin="0" aria-valuemax="100">
+        <div class="progress-bar progress-bar-striped" style="width: 5%">5%</div>
+    </div>
 
     <h2 class="text-center mb-4">APPLICATION FORM FOR GRADUATE STUDY 2020-21</h2>
     
@@ -78,472 +89,81 @@
     
     <p class="text-center">Before completing this form, please refer to the Graduate Admissions Application Guide (available at <a href="https://www.graduate.ox.ac.uk/applicationguide" target="_blank">www.graduate.ox.ac.uk/applicationguide</a>).</p>
     <p class="text-center">Any errors resulting from failure to do so may delay your application.</p>
-    <p class="text-center fw-bold">PLEASE WRITE IN BLOCK CAPITALS USING BLACK INK. COMPLETE ALL SECTIONS.</p>
     
     <form>
-        <fieldset class="border p-4 form-section">
-            <legend>SECTION A: ABOUT YOUR COURSE</legend>
-            <p><i>This form may only be used to apply for one course. If you wish to apply for more than one course, you must submit a separate application form and pay the £75 application fee each time.</i></p>
-            <div class="mb-3">
-                <label for="courseCode" class="form-label">STATE THE COURSE CODE AS GIVEN ON THE COURSE PAGE</label>
-                <input type="text" class="form-control" id="courseCode" required>
-            </div>
-            <div class="mb-3">
-                <label for="courseTitle" class="form-label">TITLE OF THE COURSE</label>
-                <input type="text" class="form-control" id="courseTitle" required>
-            </div>
-        </fieldset>
-        
-        <fieldset class="border p-4 form-section">
-            <legend>SECTION B: COLLEGE PREFERENCE</legend>
-            <p>If you are applying to a course involving college membership, please indicate below whether you have a college preference or whether you wish the University to select a college on your behalf. It is not possible to amend your college preference once you have submitted your application.</p>
-            <p><i>Details of which colleges accept for which courses may be found on our website at <a href="https://www.graduate.ox.ac.uk/courses" target="_blank">www.graduate.ox.ac.uk/courses</a>.</i></p>
-            <div class="mb-3">
-                <input type="checkbox" id="noCollegePref" class="form-check-input">
-                <label for="noCollegePref" class="form-check-label">I have no college preference</label>
-            </div>
-            <div class="mb-3">
-                <label for="collegePref" class="form-label">My college preference is:</label>
-                <input type="text" class="form-control" id="collegePref">
-            </div>
-        </fieldset>
-        
-        <fieldset class="border p-4 form-section">
-            <legend>SECTION C: PERSONAL DETAILS</legend>
-            <p>Please enter your name exactly as it appears on your passport or other official document, including middle names. If you go by a name that is not listed on your official document(s), you can enter this in the Preferred Name field.</p>
-            <div class="mb-3">
-                <label for="givenName" class="form-label">GIVEN NAME (FORENAME)</label>
-                <input type="text" class="form-control" id="givenName" required>
-            </div>
-            <div class="mb-3">
-                <label for="preferredName" class="form-label">PREFERRED NAME</label>
-                <input type="text" class="form-control" id="preferredName">
-            </div>
-            <div class="mb-3">
-                <label for="middleNames" class="form-label">MIDDLE NAME(S)</label>
-                <input type="text" class="form-control" id="middleNames">
-            </div>
-            <div class="mb-3">
-                <label for="familyName" class="form-label">FAMILY NAME (SURNAME)</label>
-                <input type="text" class="form-control" id="familyName" required>
-            </div>
-            <div class="mb-3">
-                <label for="title" class="form-label">TITLE</label>
-                <input type="text" class="form-control" id="title">
-            </div>
-            <div class="mb-3">
-                <label class="form-label">SEX</label>
-                <div>
-                    <input type="radio" id="female" name="sex" value="female">
-                    <label for="female">Female</label>
-                    <input type="radio" id="male" name="sex" value="male">
-                    <label for="male">Male</label>
-                </div>
-            </div>
-            <div class="mb-3">
-                <label for="dob" class="form-label">DATE OF BIRTH (DD/MM/YYYY)</label>
-                <input type="text" class="form-control" id="dob" required>
-            </div>
-            <div class="mb-3">
-                <label for="prevFamilyName" class="form-label">PREVIOUS FAMILY NAME (SURNAME)</label>
-                <input type="text" class="form-control" id="prevFamilyName">
-            </div>
-            <div class="mb-3">
-                <label for="prevGivenName" class="form-label">PREVIOUS GIVEN NAME (FORENAME)</label>
-                <input type="text" class="form-control" id="prevGivenName">
-            </div>
-            <div class="mb-3">
-                <label class="form-label">EFFECTIVE DATES (DD/MM/YYYY)</label>
-                <div class="row">
-                    <div class="col">
-                        <label for="effectiveFrom1" class="form-label">FROM</label>
-                        <input type="text" class="form-control" id="effectiveFrom1">
-                    </div>
-                    <div class="col">
-                        <label for="effectiveTo1" class="form-label">TO</label>
-                        <input type="text" class="form-control" id="effectiveTo1">
-                    </div>
-                </div>
-                <div class="row mt-2">
-                    <div class="col">
-                        <label for="effectiveFrom2" class="form-label">FROM</label>
-                        <input type="text" class="form-control" id="effectiveFrom2">
-                    </div>
-                    <div class="col">
-                        <label for="effectiveTo2" class="form-label">TO</label>
-                        <input type="text" class="form-control" id="effectiveTo2">
-                    </div>
-                </div>
-            </div>
-        </fieldset>
-		
-        <fieldset class="border p-4 form-section">
-            <legend>SECTION D: CONTACT INFORMATION</legend>
-            <div class="row">
-                <div class="col">
-                    <label for="homeAddress" class="form-label">HOME ADDRESS</label>
-                    <input type="text" class="form-control" id="homeAddress">
-                </div>
-                <div class="col">
-                    <label for="correspondenceAddress" class="form-label">CORRESPONDENCE ADDRESS</label>
-                    <input type="text" class="form-control" id="correspondenceAddress">
-                </div>
-            </div>
-            <div class="row">
-                <div class="col">
-                    <label for="city1" class="form-label">CITY</label>
-                    <input type="text" class="form-control" id="city1">
-                </div>
-                <div class="col">
-                    <label for="city2" class="form-label">CITY</label>
-                    <input type="text" class="form-control" id="city2">
-                </div>
-            </div>
-            <div class="row">
-                <div class="col">
-                    <label for="postcode1" class="form-label">POSTCODE/ZIP CODE</label>
-                    <input type="text" class="form-control" id="postcode1">
-                </div>
-                <div class="col">
-                    <label for="postcode2" class="form-label">POSTCODE/ZIP CODE</label>
-                    <input type="text" class="form-control" id="postcode2">
-                </div>
-            </div>
-            <div class="row">
-                <div class="col">
-                    <label for="state1" class="form-label">STATE</label>
-                    <input type="text" class="form-control" id="state1">
-                </div>
-                <div class="col">
-                    <label for="state2" class="form-label">STATE</label>
-                    <input type="text" class="form-control" id="state2">
-                </div>
-            </div>
-            <div class="row">
-                <div class="col">
-                    <label for="country1" class="form-label">COUNTRY</label>
-                    <input type="text" class="form-control" id="country1">
-                </div>
-                <div class="col">
-                    <label for="country2" class="form-label">COUNTRY</label>
-                    <input type="text" class="form-control" id="country2">
-                </div>
-            </div>
-            <div class="mb-3">
-                <label class="form-label">EFFECTIVE DATES (DD/MM/YYYY)</label>
-                <div class="row">
-                    <div class="col">
-                        <label for="effectiveFrom" class="form-label">From:</label>
-                        <input type="text" class="form-control" id="effectiveFrom">
-                    </div>
-                    <div class="col">
-                        <label for="effectiveTo" class="form-label">To:</label>
-                        <input type="text" class="form-control" id="effectiveTo">
-                    </div>
-                </div>
-            </div>
-            <div class="mb-3">
-                <label class="form-label">TELEPHONE:</label>
-                <div class="row">
-                    <div class="col">
-                        <label for="countryCode" class="form-label">COUNTRY CODE (if outside UK)</label>
-                        <input type="text" class="form-control" id="countryCode">
-                    </div>
-                    <div class="col">
-                        <label for="areaCode" class="form-label">AREA CODE (if applicable)</label>
-                        <input type="text" class="form-control" id="areaCode">
-                    </div>
-                    <div class="col">
-                        <label for="phoneNumber" class="form-label">NUMBER</label>
-                        <input type="text" class="form-control" id="phoneNumber">
-                    </div>
-                </div>
-                <label for="altPhoneNumber" class="form-label mt-2">Alternative phone number</label>
-                <input type="text" class="form-control" id="altPhoneNumber">
-            </div>
-            <div class="mb-3">
-                <label for="emailAddress" class="form-label">EMAIL ADDRESS:</label>
-                <input type="text" class="form-control" id="emailAddress">
-                <label for="altEmailAddress" class="form-label mt-2">Alternative email address</label>
-                <input type="text" class="form-control" id="altEmailAddress">
-            </div>
-        </fieldset>
-		
-        <fieldset class="border p-4 form-section">
-            <legend>SECTION E: NOMINATED THIRD PARTY</legend>
-            <p>The University of Oxford will normally only discuss your application with you. If you wish to nominate a third party with whom we may discuss your application and accept direction on its handling, please provide their details. Note that a nominated third party will be able to amend or withdraw your application on your behalf.</p>
-            <p>Do you wish to provide details of a nominated third party?</p>
-            <div class="form-check">
-                <input class="form-check-input" type="radio" name="thirdParty" id="thirdPartyYes" value="yes">
-                <label class="form-check-label" for="thirdPartyYes">Yes</label>
-            </div>
-            <div class="form-check">
-                <input class="form-check-input" type="radio" name="thirdParty" id="thirdPartyNo" value="no">
-                <label class="form-check-label" for="thirdPartyNo">No</label>
-            </div>
-        </fieldset>
-		
-        <fieldset class="border p-4 form-section">
-            <legend>SECTION F: NATIONALITY</legend>
-            <p>The details you provide on this page will be used to determine your fee status and eligibility for many scholarships. The details you give below should reflect your current situation, at the date you submit your application form.</p>
-            <label for="countryOfBirth" class="form-label">COUNTRY OF BIRTH:</label>
-            <input type="text" class="form-control mb-3" id="countryOfBirth">
-            <label for="nationality" class="form-label">COUNTRY OF NATIONALITY/CITIZENSHIP:</label>
-            <input type="text" class="form-control mb-3" id="nationality">
-            <p>Do you expect to require a visa to enter the UK for your study?</p>
-            <div class="form-check">
-                <input class="form-check-input" type="radio" name="visaRequirement" id="visaYes" value="yes">
-                <label class="form-check-label" for="visaYes">Yes</label>
-            </div>
-            <div class="form-check">
-                <input class="form-check-input" type="radio" name="visaRequirement" id="visaNo" value="no">
-                <label class="form-check-label" for="visaNo">No</label>
-            </div>
-            <div class="form-check">
-                <input class="form-check-input" type="radio" name="visaRequirement" id="visaUncertain" value="uncertain">
-                <label class="form-check-label" for="visaUncertain">Uncertain</label>
-            </div>
-            <p>If you expect to require a visa to enter the UK for your study, please provide details of the passport that you intend to use.</p>
-            <table class="table">
-                <thead>
-                    <tr>
-                        <th>NATIONALITY</th>
-                        <th>START DATE OF NATIONALITY FROM (dd/mm/yyyy)</th>
-                        <th>PASSPORT NUMBER</th>
-                        <th>COUNTRY OF ISSUE</th>
-                        <th>PASSPORT EXPIRY DATE (dd/mm/yyyy)</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td><input type="text" class="form-control"></td>
-                        <td><input type="date" class="form-control"></td>
-                        <td><input type="text" class="form-control"></td>
-                        <td><input type="text" class="form-control"></td>
-                        <td><input type="date" class="form-control"></td>
-                    </tr>
-                </tbody>
-            </table>
-            <p>ORDINARY RESIDENCE AND LEAVE TO REMAIN</p>
-            <ul>
-                <li>Your country of ordinary residence is the country in which you are normally resident, out of choice and for a settled purpose, apart from temporary or occasional absences. It is not a country in which you are studying, working, or living temporarily.</li>
-                <li>EU nationals only: If you currently live in the UK for the purpose of full-time education only, you should enter the relevant UK region (England, Northern Ireland, Scotland, or Wales) as your current residence and the country where you otherwise reside as your previous residence. The end date for your previous residence should be entered as the day before you arrived in the UK.</li>
-                <li>If you have been ordinarily resident in a single country since birth, please enter your birth date in the 'From:' field for the 'current country of ordinary residence' question.</li>
-                <li>If you have been ordinarily resident in more than one country, your dates of residence must not overlap. You must include an end date for your previous country of ordinary residence, which must be at least one day before the start date of your current country of ordinary residence.</li>
-                <li>If you are resident in a country listed in Section O, you may be eligible for a fee waiver.</li>
-            </ul>
-			<label for="currentResidence">CURRENT COUNTRY OF ORDINARY RESIDENCE</label>
-            <input type="text" class="form-control mb-2" id="currentResidence">
-            <label for="previousResidence">PREVIOUS COUNTRY OF RESIDENCE</label>
-            <input type="text" class="form-control mb-2" id="previousResidence">
-            <p>I am an EU national resident in the UK for the main purpose of full-time education</p>
-            <input type="checkbox" id="euResidentYes"> Yes
-            <input type="checkbox" id="euResidentNo"> No
-            <p>If you are not a UK or EU Citizen but currently living in the UK, do you have Indefinite Leave to Remain status?</p>
-            <input type="checkbox" id="indefiniteLeaveYes"> Yes
-            <input type="checkbox" id="indefiniteLeaveNo"> No
-            <label for="leaveGrantedDate">If yes, when was it granted?</label>
-            <input type="date" class="form-control" id="leaveGrantedDate">
-        </fieldset>
-		
-        <fieldset class="border p-4 form-section">
-            <legend>SECTION G: ACCOMMODATION</legend>
-            <p>This section is for information only and does not constitute an application to University or college accommodation. For further information, please visit the Accommodation Office website (<a href="http://www.admin.ox.ac.uk/accommodation/">Accommodation Office</a>).</p>
-            <p>Do you intend to apply for accommodation owned by the college?</p>
-            <input type="checkbox" id="accommodationYes"> Yes
-            <input type="checkbox" id="accommodationNo"> No
-            <label for="accompanyingAdults">Excluding yourself, how many adults will be accompanying you?</label>
-            <input type="number" class="form-control" id="accompanyingAdults">
-            <label for="accompanyingChildren">Please provide the sex and date of birth of any accompanying children:</label>
-            <input type="text" class="form-control" id="accompanyingChildren">
-        </fieldset>
-        <fieldset class="border p-4 form-section">
-            <legend>SECTION H: REFEREES</legend>
-            <p>Please enter contact details for three referees below.</p>
-            <p>References should be academic or, where specifically permitted on the course page (<a href="http://www.graduate.ox.ac.uk/courses">Graduate Courses</a>), professional. Family members, friends, and neighbours may not act as referees.</p>
-            <p>It is a University requirement that three references are provided and that references are received in time for the deadline for your application to be considered. For more information on references, please see the <a href="http://www.graduate.ox.ac.uk/applicationguide">Application Guide</a>.</p>
-            <p>Please ask your referee to send the reference directly to us at <a href="mailto:graduate.admissions@admin.ox.ac.uk">graduate.admissions@admin.ox.ac.uk</a> quoting your full name and the course to which you are applying, and we will add it to your application.</p>
-            <p>References must be sent to us from your referee’s official (institutional or organisational) email address. Alternatively, sealed references may be enclosed with this application. In this case, each reference must be in a sealed envelope, signed by the referee across the seal of the envelope and their signature covered with clear adhesive tape.</p>
-                <table class="table">
-                    <thead>
-                        <tr>
-                            <th>Referee Title, Name, and Role</th>
-                            <th>Referee Institution/Professional Address</th>
-                            <th>Type of Reference</th>
-                            <th>Reference Submission Type</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td><input type="text" class="form-control"></td>
-                            <td><input type="text" class="form-control"></td>
-                            <td><input type="text" class="form-control"></td>
-                            <td>
-                                <input type="checkbox"> Will submit by email
-                                <input type="checkbox"> Sealed reference enclosed
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
-            </fieldset>
-			
-        <fieldset class="border p-4 form-section">
-            <legend>SECTION I: DETAILS OF CURRENT & PREVIOUS EDUCATION</legend>
-            <p>Please enter your previous and current qualifications, newest first. Include all degree-level and above qualifications.</p>
-            <table class="table table-bordered">
-                <thead>
-                    <tr>
-                        <th>University/Institution attended</th>
-                        <th>Start date (dd/mm/yyyy)</th>
-                        <th>Date of completion/expected completion (dd/mm/yyyy)</th>
-                        <th>Qualification obtained or studying for</th>
-                        <th>Main subject</th>
-                        <th>Result/expected result</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td><input type="text" class="form-control"></td>
-                        <td><input type="date" class="form-control"></td>
-                        <td><input type="date" class="form-control"></td>
-                        <td><input type="text" class="form-control"></td>
-                        <td><input type="text" class="form-control"></td>
-                        <td><input type="text" class="form-control"></td>
-                    </tr>
-                </tbody>
-            </table>
-            <p>If you require a Tier 4 student visa, please give details below of any periods of study (including non-degree level courses), complete or incomplete, undertaken in the UK that are not already listed above.</p>
-            <table class="table table-bordered">
-                <thead>
-                    <tr>
-                        <th>University/Institution attended</th>
-                        <th>Start date (dd/mm/yyyy)</th>
-                        <th>Date of completion/expected completion (dd/mm/yyyy)</th>
-                        <th>Course title</th>
-                        <th>Level</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td><input type="text" class="form-control"></td>
-                        <td><input type="date" class="form-control"></td>
-                        <td><input type="date" class="form-control"></td>
-                        <td><input type="text" class="form-control"></td>
-                        <td><input type="text" class="form-control"></td>
-                    </tr>
-                </tbody>
-            </table>
-            <p>Have you undertaken degree-level study at any institution, which you have not completed, excluding any qualification you are currently working towards?</p>
-            <div class="form-check">
-                <input class="form-check-input" type="radio" name="incompleteDegree" id="incompleteDegreeYes" value="yes">
-                <label class="form-check-label" for="incompleteDegreeYes">Yes</label>
-            </div>
-            <div class="form-check">
-                <input class="form-check-input" type="radio" name="incompleteDegree" id="incompleteDegreeNo" value="no">
-                <label class="form-check-label" for="incompleteDegreeNo">No</label>
-            </div>
-            <label for="incompleteDetails">If "Yes", please state the course(s) and the institution(s) and the reason(s) the qualification was not completed:</label>
-            <textarea class="form-control" id="incompleteDetails"></textarea>
-            <p>Are you planning to begin, or to continue studying for, a degree at any institution, at the same time as you would also be studying at Oxford for the course for which you are now applying?</p>
-            <div class="form-check">
-                <input class="form-check-input" type="radio" name="dualStudy" id="dualStudyYes" value="yes">
-                <label class="form-check-label" for="dualStudyYes">Yes</label>
-            </div>
-            <div class="form-check">
-                <input class="form-check-input" type="radio" name="dualStudy" id="dualStudyNo" value="no">
-                <label class="form-check-label" for="dualStudyNo">No</label>
-            </div>
-            <label for="dualStudyDetails">If "Yes", please provide details of the course and the institution and how you believe it will be possible to pursue both courses at the same time:</label>
-            <textarea class="form-control" id="dualStudyDetails"></textarea>
-        </fieldset>
-		
-       <fieldset class="border p-4 form-section">
-            <legend>SECTION J: GRE (IF APPLICABLE)</legend>
-            <p>For further information on whether a GRE score is required please see our <a href="www.graduate.ox.ac.uk/applicationguide">Application Guide</a>.</p>
-            <label for="greDate">GRE Date of Test:</label>
-            <input type="date" class="form-control" id="greDate">
-            <label for="verbalPercent">Verbal %:</label>
-            <input type="text" class="form-control" id="verbalPercent">
-            <label for="verbalScore">Verbal Score:</label>
-            <input type="text" class="form-control" id="verbalScore">
-            <label for="quantPercent">Quantitative %:</label>
-            <input type="text" class="form-control" id="quantPercent">
-            <label for="quantScore">Quantitative Score:</label>
-            <input type="text" class="form-control" id="quantScore">
-            <label for="analyticalPercent">Analytical Writing %:</label>
-            <input type="text" class="form-control" id="analyticalPercent">
-            <label for="analyticalScore">Analytical Writing Score:</label>
-            <input type="text" class="form-control" id="analyticalScore">
-        </fieldset>
-		
-        <fieldset class="border p-4 form-section">
-            <legend>SECTION K: ENGLISH LANGUAGE SKILLS</legend>
-            <label>Is English your first language?</label>
-            <input type="checkbox"> Yes <input type="checkbox"> No
-            <label>Have you completed a full-time qualification equivalent to a UK degree entirely taught and assessed in English?</label>
-            <input type="checkbox"> Yes <input type="checkbox"> No
-            <label>Have you completed a course under a United Kingdom Tier 4 child visa?</label>
-            <input type="checkbox"> Yes <input type="checkbox"> No
-        </fieldset>
-        <fieldset class="border p-4 form-section">
-            <legend>SECTION L: ENGLISH LANGUAGE PROFICIENCY</legend>
-            <p>If your first language is not English, or if your first language is English but you are not a national of the UK, Ireland or a majority English-speaking country recognised by the UK Home Office (<a href="www.graduate.ox.ac.uk/englishproficiency">English Proficiency</a>), you must either supply an English test result or upload a letter explaining why you are requesting a waiver to the English language test.</p>
-            <p>If you have IELTS (Academic), TOEFL or Cambridge Certificate test results which will be less than two years old when your course commences, please enter them below. The required scores must be met in a single test, not across multiple settings.</p>
-            
-            <table>
-                <tr>
-                    <th>Test Type</th>
-                    <th>Date Taken</th>
-                    <th>Overall Result</th>
-                    <th colspan="4">Component Scores</th>
-                </tr>
-                <tr>
-                    <th></th>
-                    <th></th>
-                    <th></th>
-                    <th>Listening</th>
-                    <th>Reading</th>
-                    <th>Writing</th>
-                    <th>Speaking</th>
-                </tr>
-                <tr>
-                    <td><input type="text" class="form-control" placeholder="e.g., TOEFL, IELTS"></td>
-                    <td><input type="date" class="form-control"></td>
-                    <td><input type="text" class="form-control"></td>
-                    <td><input type="text" class="form-control"></td>
-                    <td><input type="text" class="form-control"></td>
-                    <td><input type="text" class="form-control"></td>
-                    <td><input type="text" class="form-control"></td>
-                </tr>
-            </table>
-			
-            <label>I intend to submit a test waiver request with my supporting materials:</label>
-            <input type="checkbox"> Yes <input type="checkbox"> No
-            <p>For more information on test waivers, please see the <a href="www.graduate.ox.ac.uk/applicationguide">Application Guide</a>.</p>
-            <label>Knowledge of Other Languages:</label>
-            <p>If you have a working knowledge of languages other than English (including your native language), please specify and state whether your level of competence in Reading, Writing, Speaking, and Understanding is Advanced, Intermediate, or Basic.</p>
-            <label for="language">Language:</label>
-            <input type="text" class="form-control" id="language">
-            <div class="row">
-                <div class="col">
-                    <label for="readingLevel">Reading:</label>
-                    <input type="text" class="form-control" id="readingLevel">
-                </div>
-                <div class="col">
-                    <label for="writingLevel">Writing:</label>
-                    <input type="text" class="form-control" id="writingLevel">
-                </div>
-                <div class="col">
-                    <label for="speakingLevel">Speaking:</label>
-                    <input type="text" class="form-control" id="speakingLevel">
-                </div>
-                <div class="col">
-                    <label for="understandingLevel">Understanding:</label>
-                    <input type="text" class="form-control" id="understandingLevel">
-                </div>
-            </div>
-        </fieldset>
-        <a href="jensection.html" class="btn btn-primary"> Go to Jens Page</a>
+        <fieldset class="form-section">
+        <legend>Section A: About Your Course</legend>
+    <p><em>This form may only be used to apply for one course. If you wish to apply for more than one course, you must submit a separate application form and pay the £75 application fee each time.</em></p>
+    <label for="courseCode">State the course code as given on the course page:</label>
+    <input type="text" id="courseCode" class="form-control">
+    <p><a href="https://www.ox.ac.uk/admissions/graduate/courses">www.ox.ac.uk/admissions/graduate/courses</a></p>
+    <label for="courseTitle">Title of the course:</label>
+    <input type="text" id="courseTitle" class="form-control">
+    <p><em>For certain courses, you may need to supply additional information. If (iii) and (iv) do not apply, please continue to the next question.</em></p>
+    <p><strong>For research courses (e.g. DPhil, MSc by Research (MRes), etc.):</strong></p>
+    <label for="researchProject">State the proposed field and title of research project:</label>
+    <textarea id="researchProject" class="form-control"></textarea>
+    <br>
+    <label for="supervisorName">Proposed supervisor name(s) (if known):</label>
+    <input type="text" id="supervisorName" class="form-control">
+    <br>
+    <p><strong>For all courses</strong></p>
+    <label for="interviewDates">Date(s) unavailable for interview or visit:</label>
+    <input type="text" id="interviewDates" class="form-control">
+    <br>
+    <p><strong>For Masters courses</strong></p>
+    <p>Do you intend to apply for a research degree after completing this course?</p>
+    <input type="radio" id="yes" name="researchDegree" value="Yes"> <label for="yes">Yes</label>
+    <input type="radio" id="no" name="researchDegree" value="No"> <label for="no">No</label>
+    <input type="radio" id="unsure" name="researchDegree" value="Unsure"> <label for="unsure">Unsure</label>
+    </fieldset>
+
+    <fieldset class="form-section">
+        <legend>Section B: College Preference</legend>
+        <p><em>If you are applying to a course involving college membership, please indicate below whether you have a college preference or
+            whether you wish the University to select a college on your behalf. It is not possible to amend your college preference once you
+            have submitted your application.</em></p>
+        <p><em>Details of which colleges accept for which courses may be found on our website at</em></p>
+        <p><a href="http://www.graduate.ox.ac.uk/courses">www.graduate.ox.ac.uk/courses</a></p>
+        <label>College Preference:</label>
+        <br>
+        <input type="radio" id="noCollegePref" name="noCollegePref"> <label for="noCollegePref">I have no college preference</label>
+        <br><br>
+        <p>My college preference is:</p>
+        <input type="text" class="form-control" id="collegePref">
+    </fieldset>
+
+    <fieldset class="form-section">
+        <legend>Section C: Personal Details</legend>
+        <p><strong>Please enter your name exactly as it appears on your passport or other official document, including middle names. If you go by
+            a name that is not listed on your official document(s), you can enter this in the Preferred Name field.</strong></p>
+        <label for="givenName">Given Name (Forename):</label>
+        <input type="text" class="form-control" id="givenName" required>
+        <br>
+        <label for="givenName">Preferred name:</label>
+        <input type="text" class="form-control" id="preferredName" required>
+        <br>
+        <label for="givenName">Middle name(s):</label>
+        <input type="text" class="form-control" id="middledName">
+        <br>
+        <label for="familyName">Family Name (Surname):</label>
+        <input type="text" class="form-control" id="familyName" required>
+        <br>
+        <label for="familyName">Title (Miss, Mr, Mrs, Ms, Mx, Dr, Professor, Reverend, No Title):</label>
+        <input type="text" class="form-control" id="titleName" required>
+        <br>
+        <p>Sex:</p>
+        <input type="radio" id="Female" name="femGender" value="Female"> <label for="Female">Female</label>
+        <input type="radio" id="Male" name="maleGender" value="Male"> <label for="Male">Male</label>
+        <br></br>
+        <label for="dob">Date of Birth:</label>
+        <input type="date" class="form-control" id="dob" required>
+    </fieldset>
+
+<div class="nav-btn">
+    <input class="btn btn-warning" type="reset" value="Reset">
+    <a href="daisysection2.html" class="btn btn-primary">Continue to Next Section</a>
+</div>
 
         <a href="piksection.html" class="btn btn-primary"> Go to Piks Page</a>
     </form>
