@@ -74,6 +74,58 @@
             font-size: 15px;
             font-weight: normal;
         }
+
+        .nav-btn {
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        .btn-primary {
+            background-color: #002147 !important;
+            border-color: #002147 !important;
+        }
+
+        .input-group{
+            position: relative;
+        }
+
+        .input{
+            padding: 10px;
+            width: 100%;
+            box-sizing: border-box;
+            outline: none;
+            border: 1px solid black;
+            border-radius: 8px;
+        }
+
+        .schoolInput{
+            position: absolute;
+            top: 10px;
+            left: 8px;
+            font-size: 14px;
+            padding: 0px 5px;
+            transition: 0.3s;
+            pointer-events: none;
+        }
+
+        .input:focus + .schoolInput{
+            top: -10px;
+            background-color: #fff;
+        } 
+
+        tbody tr input{
+            display: block;
+            margin: auto;
+        }
+
+        thead tr th{
+            text-align: center;
+        }
+
+        input[type="checkbox"] {
+            width: 18px;
+            height: 18px;
+          }
     </style>
 </head>
 
@@ -83,7 +135,7 @@
     </header>
 
     <div class="progress progressbarstyle border border-black"  role="progressbar" aria-label="Default striped example" aria-valuenow="35" aria-valuemin="0" aria-valuemax="100">
-        <div class="progress-bar progress-bar-striped" style="width: 65%">65%</div>
+        <div class="progress-bar progress-bar-striped" style="width: 80%">80%</div>
     </div>
 
     <form>
@@ -92,17 +144,21 @@
 
             <table class="table table-bordered mx-auto p-2">
                 <tr>
-                    <td><b>Were you educated in the UK for your secondary education?</b><br> 
-                        ('Secondary' refers to ages 11-18, in Scotland 11-17/12-18)</td>
+                    <td>
+                        <b>Were you educated in the UK for your secondary education?</b><br> 
+                        ('Secondary' refers to ages 11-18, in Scotland 11-17/12-18)
+                    </td>
                     <td>
                         <div class="form-check">
                             <input class="form-check-input" type="radio" name="ukEducation" id="ukEducationYes" value="yes">
                             <label class="form-check-label nobold" for="ukEducationYes">Yes</label>
                         </div>
+
                         <div class="form-check">
                             <input class="form-check-input" type="radio" name="ukEducation" id="ukEducationNo" value="no">
                             <label class="form-check-label nobold" for="ukEducationNo">No</label>
                         </div>
+
                         <div class="form-check">
                             <input class="form-check-input" type="radio" name="ukEducation" id="ukEducationPreferNot" value="preferNot">
                             <label class="form-check-label nobold" for="ukEducationPreferNot">Prefer not to say</label>
@@ -111,606 +167,412 @@
                 </tr>
 
                 <tr>
-                    <td><b>If your secondary school was in the UK: What school/college did you attend in the last year of your GCSE or equivalent (normally at age 16)?</b></td>
                     <td>
-                        <label for="gcseSchoolName">Name of School</label>
-                        <input type="text" class="form-control" id="gcseSchoolName">
+                        <b>If your secondary school was in the UK: What school/college did you attend in the last year of your GCSE or equivalent (normally at age 16)?</b>
+                    </td>
+                    <td>
+                        <div class="form-floating mb-3">
+                            <input type="text" class="form-control" id="floatingInput" placeholder="Name of School">
+                            <label for="floatingInput">Name of School</label>
+                        </div>
 
-                        <label for="gcseSchoolPostcode">Postcode of school</label>
-                        <input type="text" class="form-control" id="gcseSchoolPostcode">
+                        <div class="form-floating mb-3">
+                            <input type="text" class="form-control" id="floatingInput" placeholder="Postcode of School">
+                            <label for="floatingInput">Postcode of School</label>
+                        </div>
                     </td>
                 </tr>
+                    
                 <tr>
-                    <td></td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td></td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td></td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td></td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td></td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td></td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td></td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td></td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td></td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td></td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td></td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td></td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td></td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td></td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td></td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td></td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td></td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td></td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td></td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td></td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td></td>
-                    <td></td>
+                    <td>
+                        <b>If your secondary school was in the UK: How would you best describe this school?</b><br>
+                        (A selective school, eg a grammar school, is where entry is on the basis of passing an examination)
+                    </td>
+                    <td>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="gcseSchoolType" id="gcseSelectiveState" value="selectiveState">
+                            <label class="form-check-label nobold" for="gcseSelectiveState">Selective State school</label>
+                        </div>
+
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="gcseSchoolType" id="gcseNonSelectiveState" value="nonSelectiveState">
+                            <label class="form-check-label nobold" for="gcseNonSelectiveState">Non-selective state school</label>
+                        </div>
+
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="gcseSchoolType" id="gcseIndependent" value="independent">
+                            <label class="form-check-label nobold" for="gcseIndependent">Independent fee-paying school</label>
+                        </div>
+
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="gcseSchoolType" id="gcseOther" value="other">
+                            <label class="form-check-label nobold" for="gcseOther">Other</label>
+                        </div>
+                    </td>
                 </tr>
 
+                <tr>
+                    <td>
+                        <b>If your school/college was in the UK: What school/college did you attend in the last year of your A-levels or equivalent (normally at age 18)?</b>
+                    </td>
+                    <td>
+                        <div class="form-floating mb-3">
+                            <input type="text" class="form-control" id="floatingInput" placeholder="Name of School">
+                            <label for="floatingInput">Name of School</label>
+                        </div>
+
+                        <div class="form-floating mb-3">
+                            <input type="text" class="form-control" id="floatingInput" placeholder="Postcode of School">
+                            <label for="floatingInput">Postcode of School</label>
+                        </div>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <b>If your school/college was in the UK: How would you best describe this school?</b>
+                    </td>
+                    <td>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="gcseSchoolType" id="gcseSelectiveState" value="selectiveState">
+                            <label class="form-check-label nobold" for="gcseSelectiveState">Selective State school</label>
+                        </div>
+
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="gcseSchoolType" id="gcseNonSelectiveState" value="nonSelectiveState">
+                            <label class="form-check-label nobold" for="gcseNonSelectiveState">Non-selective state school</label>
+                        </div>
+
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="gcseSchoolType" id="gcseIndependent" value="independent">
+                            <label class="form-check-label nobold" for="gcseIndependent">Independent fee-paying school</label>
+                        </div>
+
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="gcseSchoolType" id="gcseOther" value="other">
+                            <label class="form-check-label nobold" for="gcseOther">Other</label>
+                        </div>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <b>If your school/college was in the UK: What was your home postcode in the last year of secondary education before you started your undergraduate degree (normally at age 18)?</b>
+                    </td>
+                    <td>
+                        <input type="text" class="form-control" id="homePostcode">
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <b>If your primary or secondary education was in the UK, were you ever entitled to free school meals?</b><br>
+                        (Students at state schools in the UK may receive free meals at school where their family received certain other income-related state benefits)
+                    </td>
+                    <td>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="freeSchoolMeals" id="freeMealsYes" value="yes">
+                            <label class="form-check-label nobold" for="freeMealsYes">Yes</label>
+                        </div>
+
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="freeSchoolMeals" id="freeMealsNo" value="no">
+                            <label class="form-check-label nobold" for="freeMealsNo">No</label>
+                        </div>
+
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="freeSchoolMeals" id="freeMealsUnsure" value="unsure">
+                            <label class="form-check-label nobold" for="freeMealsUnsure">Unsure</label>
+                        </div>
+
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="freeSchoolMeals" id="freeMealsPreferNot" value="preferNot">
+                            <label class="form-check-label nobold" for="freeMealsPreferNot">Prefer not to say</label>
+                        </div>
+                    </td>
+                </tr>
+
+                <!-- <tr>
+                    <td>
+                        <b>Do any of your parents/guardians have an undergraduate degree?</b>
+                    </td>
+                    <td>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="parentsUndergradDegree" id="parentsDegreeYes" value="yes">
+                            <label class="form-check-label nobold" for="parentsDegreeYes">Yes</label>
+                        </div>
+
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="parentsUndergradDegree" id="parentsDegreeNo" value="no">
+                            <label class="form-check-label nobold" for="parentsDegreeNo">No</label>
+                        </div>
+
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="parentsUndergradDegree" id="parentsDegreeDontKnow" value="dontKnow">
+                            <label class="form-check-label nobold" for="parentsDegreeDontKnow">Don't know</label>
+                        </div>
+
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="parentsUndergradDegree" id="parentsDegreePreferNot" value="preferNot">
+                            <label class="form-check-label nobold" for="parentsDegreePreferNot">Prefer not to say</label>
+                        </div>
+                    </td>
+                </tr> -->
             </table>
 
+            <table class="table">
+                <thead>
+                    <tr>
+                        <td>
+                            <b>Do any of your parents/guardians have an undergraduate degree?</b>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="parentsUndergradDegree" id="parentsDegreeYes" value="yes">
+                                <label class="form-check-label nobold" for="parentsDegreeYes">Yes</label>
+                            </div>
+                
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="parentsUndergradDegree" id="parentsDegreeNo" value="no">
+                                <label class="form-check-label nobold" for="parentsDegreeNo">No</label>
+                            </div>
+                
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="parentsUndergradDegree" id="parentsDegreeDontKnow" value="dontKnow">
+                                <label class="form-check-label nobold" for="parentsDegreeDontKnow">Don't know</label>
+                            </div>
+                
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="parentsUndergradDegree" id="parentsDegreePreferNot" value="preferNot">
+                                <label class="form-check-label nobold" for="parentsDegreePreferNot">Prefer not to say</label>
+                            </div>
+                        </td>
+                    </tr>
+                </thead>
+            </table>
             
+            <table class="table">
+                <thead>
+                    <tr>
+                        <td colspan="3">
+                            <b>Which of the following socio-economic categories best describes the jobs of your parents or guardians during your final year of secondary education?</b>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th></th>
+                        <th>Parent/Guardian 1</th>
+                        <th>Parent/Guardian 2</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Higher managerial, administrative and professional occupations</td>
+                        <td><input type="checkbox" name="parent1Job" value="higherManagerial" style="display: block; margin: auto"></td>
+                        <td><input type="checkbox" name="parent2Job" value="higherManagerial"></td>
+                    </tr>
+                    <tr>
+                        <td>Lower managerial, administrative and professional occupations</td>
+                        <td><input type="checkbox" name="parent1Job" value="lowerManagerial"></td>
+                        <td><input type="checkbox" name="parent2Job" value="lowerManagerial"></td>
+                    </tr>
+                    <tr>
+                        <td>Intermediate occupations</td>
+                        <td><input type="checkbox" name="parent1Job" value="intermediate"></td>
+                        <td><input type="checkbox" name="parent2Job" value="intermediate"></td>
+                    </tr>
+                    <tr>
+                        <td>Small employers and own account workers</td>
+                        <td><input type="checkbox" name="parent1Job" value="smallEmployers"></td>
+                        <td><input type="checkbox" name="parent2Job" value="smallEmployers"></td>
+                    </tr>
+                    <tr>
+                        <td>Lower supervisory and technical occupations</td>
+                        <td><input type="checkbox" name="parent1Job" value="lowerSupervisory"></td>
+                        <td><input type="checkbox" name="parent2Job" value="lowerSupervisory"></td>
+                    </tr>
+                    <tr>
+                        <td>Routine occupations</td>
+                        <td><input type="checkbox" name="parent1Job" value="routine"></td>
+                        <td><input type="checkbox" name="parent2Job" value="routine"></td>
+                    </tr>
+                    <tr>
+                        <td>Never worked and long-term unemployed</td>
+                        <td><input type="checkbox" name="parent1Job" value="neverWorked"></td>
+                        <td><input type="checkbox" name="parent2Job" value="neverWorked"></td>
+                    </tr>
+                    <tr>
+                        <td>Prefer not to say</td>
+                        <td><input type="checkbox" name="parent1Job" value="preferNot"></td>
+                        <td><input type="checkbox" name="parent2Job" value="preferNot"></td>
+                    </tr>
+                </tbody>
+            </table>
 
-            <div class="form-group">
-                <label>If your secondary school was in the UK: How would you best describe this school? (A selective school, eg a grammar school, is where entry is on the basis of passing an examination)</label>
-                <div class="form-check">
-                    <input class="form-check-input" type="radio" name="gcseSchoolType" id="gcseSelectiveState" value="selectiveState">
-                    <label class="form-check-label" for="gcseSelectiveState">Selective State school</label>
-                </div>
-                <div class="form-check">
-                    <input class="form-check-input" type="radio" name="gcseSchoolType" id="gcseNonSelectiveState" value="nonSelectiveState">
-                    <label class="form-check-label" for="gcseNonSelectiveState">Non-selective state school</label>
-                </div>
-                <div class="form-check">
-                    <input class="form-check-input" type="radio" name="gcseSchoolType" id="gcseIndependent" value="independent">
-                    <label class="form-check-label" for="gcseIndependent">Independent fee-paying school</label>
-                </div>
-                <div class="form-check">
-                    <input class="form-check-input" type="radio" name="gcseSchoolType" id="gcseOther" value="other">
-                    <label class="form-check-label" for="gcseOther">Other</label>
-                </div>
-            </div>
+            <table class="table table-bordered mx-auto p-2">
+                <tr>
+                    <td>
+                        <b>Did you undertake your undergraduate degree in the UK?</b>
+                    </td>
+                    <td>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="undergradUK" id="undergradUKYes" value="yes">
+                            <label class="form-check-label nobold" for="undergradUKYes">Yes</label>
+                        </div>
 
-            <div class="form-group">
-                <label>If your school/college was in the UK: What school/college did you attend in the last year of your A-levels or equivalent (normally at age 18)?</label>
-                <input type="text" class="form-control" id="alevelSchoolName">
-            </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="undergradUK" id="undergradUKNo" value="no">
+                            <label class="form-check-label nobold" for="undergradUKNo">No</label>
+                        </div>
+                        
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="undergradUK" id="undergradUKPreferNot" value="preferNot">
+                            <label class="form-check-label nobold" for="undergradUKPreferNot">Prefer not to say</label>
+                        </div>
+                    </td>
+                </tr>
 
-            <div class="form-group">
-                <label>Postcode of school</label>
-                <input type="text" class="form-control" id="alevelSchoolPostcode">
-            </div>
+                <tr>
+                    <td>
+                        <b>If yes, did you take out a student loan for all or part of your undergraduate degree?</b>
+                    </td>
+                    <td>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="undergradUK" id="undergradUKYes" value="yes">
+                            <label class="form-check-label nobold" for="undergradUKYes">Yes</label>
+                        </div>
 
-            <div class="form-group">
-                <label>If your school/college was in the UK: How would you best describe this school?</label>
-                <div class="form-check">
-                    <input class="form-check-input" type="radio" name="alevelSchoolType" id="alevelSelectiveState" value="selectiveState">
-                    <label class="form-check-label" for="alevelSelectiveState">Selective State school</label>
-                </div>
-                <div class="form-check">
-                    <input class="form-check-input" type="radio" name="alevelSchoolType" id="alevelNonSelectiveState" value="nonSelectiveState">
-                    <label class="form-check-label" for="alevelNonSelectiveState">Non-selective state school</label>
-                </div>
-                <div class="form-check">
-                    <input class="form-check-input" type="radio" name="alevelSchoolType" id="alevelIndependent" value="independent">
-                    <label class="form-check-label" for="alevelIndependent">Independent fee-paying school</label>
-                </div>
-                <div class="form-check">
-                    <input class="form-check-input" type="radio" name="alevelSchoolType" id="alevelOther" value="other">
-                    <label class="form-check-label" for="alevelOther">Other</label>
-                </div>
-            </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="undergradUK" id="undergradUKNo" value="no">
+                            <label class="form-check-label nobold" for="undergradUKNo">No</label>
+                        </div>
+                        
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="undergradUK" id="undergradUKPreferNot" value="preferNot">
+                            <label class="form-check-label nobold" for="undergradUKPreferNot">Prefer not to say</label>
+                        </div>
+                    </td>
+                </tr>
 
-            <div class="form-group">
-                <label>If your school/college was in the UK: What was your home postcode in the last year of secondary education before you started your undergraduate degree (normally at age 18)?</label>
-                <input type="text" class="form-control" id="homePostcode">
-            </div>
-			
-			     <div class="form-group">
-                <label>If your primary or secondary education was in the UK, were you ever entitled to free school meals? (Students at state schools in the UK may receive free meals at school where their family received certain other income-related state benefits)</label>
-                <div class="form-check">
-                    <input class="form-check-input" type="radio" name="freeSchoolMeals" id="freeMealsYes" value="yes">
-                    <label class="form-check-label" for="freeMealsYes">Yes</label>
-                </div>
-                <div class="form-check">
-                    <input class="form-check-input" type="radio" name="freeSchoolMeals" id="freeMealsNo" value="no">
-                    <label class="form-check-label" for="freeMealsNo">No</label>
-                </div>
-                <div class="form-check">
-                    <input class="form-check-input" type="radio" name="freeSchoolMeals" id="freeMealsUnsure" value="unsure">
-                    <label class="form-check-label" for="freeMealsUnsure">Unsure</label>
-                </div>
-                <div class="form-check">
-                    <input class="form-check-input" type="radio" name="freeSchoolMeals" id="freeMealsPreferNot" value="preferNot">
-                    <label class="form-check-label" for="freeMealsPreferNot">Prefer not to say</label>
-                </div>
-            </div>
+                <tr>
+                    <td>
+                        <b>If your undergraduate degree was in the UK, did you qualify for (income-assessed) UK government support for your undergraduate degree when you applied to your regional funding agency? (eg Student Finance England, Student Awards Agency for Scotland)</b><br>
+                        (If you entered university before August 2016 and received a maintenance grant (not a maintenance loan), then please tick yes. If you entered university after August 2016, was your household income assessed as £40,000 or less (which will be stated in the letter from your student finance agency)).
+                    </td>
+                    <td>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="undergradUK" id="undergradUKYes" value="yes">
+                            <label class="form-check-label nobold" for="undergradUKYes">Yes</label>
+                        </div>
 
-            <div class="form-group">
-                <label>Do any of your parents/guardians have an undergraduate degree?</label>
-                <div class="form-check">
-                    <input class="form-check-input" type="radio" name="parentsUndergradDegree" id="parentsDegreeYes" value="yes">
-                    <label class="form-check-label" for="parentsDegreeYes">Yes</label>
-                </div>
-                <div class="form-check">
-                    <input class="form-check-input" type="radio" name="parentsUndergradDegree" id="parentsDegreeNo" value="no">
-                    <label class="form-check-label" for="parentsDegreeNo">No</label>
-                </div>
-                <div class="form-check">
-                    <input class="form-check-input" type="radio" name="parentsUndergradDegree" id="parentsDegreeDontKnow" value="dontKnow">
-                    <label class="form-check-label" for="parentsDegreeDontKnow">Don't know</label>
-                </div>
-                <div class="form-check">
-                    <input class="form-check-input" type="radio" name="parentsUndergradDegree" id="parentsDegreePreferNot" value="preferNot">
-                    <label class="form-check-label" for="parentsDegreePreferNot">Prefer not to say</label>
-                </div>
-            </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="undergradUK" id="undergradUKNo" value="no">
+                            <label class="form-check-label nobold" for="undergradUKNo">No</label>
+                        </div>
+                        
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="undergradUK" id="undergradUKPreferNot" value="preferNot">
+                            <label class="form-check-label nobold" for="undergradUKPreferNot">Prefer not to say</label>
+                        </div>
+                    </td>
+                </tr>
+            </table>
 
-            <div class="form-group">
-                <label>Which of the following socio-economic categories best describes the jobs of your parents or guardians during your final year of secondary education?</label>
-                <table class="table">
-                    <thead>
-                        <tr>
-                            <th></th>
-                            <th>Parent/Guardian 1</th>
-                            <th>Parent/Guardian 2</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>Higher managerial, administrative and professional occupations</td>
-                            <td><input type="radio" name="parent1Job" value="higherManagerial"></td>
-                            <td><input type="radio" name="parent2Job" value="higherManagerial"></td>
-                        </tr>
-                        <tr>
-                            <td>Lower managerial, administrative and professional occupations</td>
-                            <td><input type="radio" name="parent1Job" value="lowerManagerial"></td>
-                            <td><input type="radio" name="parent2Job" value="lowerManagerial"></td>
-                        </tr>
-                        <tr>
-                            <td>Intermediate occupations</td>
-                            <td><input type="radio" name="parent1Job" value="intermediate"></td>
-                            <td><input type="radio" name="parent2Job" value="intermediate"></td>
-                        </tr>
-                        <tr>
-                            <td>Small employers and own account workers</td>
-                            <td><input type="radio" name="parent1Job" value="smallEmployers"></td>
-                            <td><input type="radio" name="parent2Job" value="smallEmployers"></td>
-                        </tr>
-                        <tr>
-                            <td>Lower supervisory and technical occupations</td>
-                            <td><input type="radio" name="parent1Job" value="lowerSupervisory"></td>
-                            <td><input type="radio" name="parent2Job" value="lowerSupervisory"></td>
-                        </tr>
-                        <tr>
-                            <td>Routine occupations</td>
-                            <td><input type="radio" name="parent1Job" value="routine"></td>
-                            <td><input type="radio" name="parent2Job" value="routine"></td>
-                        </tr>
-                        <tr>
-                            <td>Never worked and long-term unemployed</td>
-                            <td><input type="radio" name="parent1Job" value="neverWorked"></td>
-                            <td><input type="radio" name="parent2Job" value="neverWorked"></td>
-                        </tr>
-                        <tr>
-                            <td>Prefer not to say</td>
-                            <td><input type="radio" name="parent1Job" value="preferNot"></td>
-                            <td><input type="radio" name="parent2Job" value="preferNot"></td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-			            <div class="form-group">
-                <label>Did you undertake your undergraduate degree in the UK?</label>
-                <div class="form-check">
-                    <input class="form-check-input" type="radio" name="undergradUK" id="undergradUKYes" value="yes">
-                    <label class="form-check-label" for="undergradUKYes">Yes</label>
-                </div>
-                <div class="form-check">
-                    <input class="form-check-input" type="radio" name="undergradUK" id="undergradUKNo" value="no">
-                    <label class="form-check-label" for="undergradUKNo">No</label>
-                </div>
-                <div class="form-check">
-                    <input class="form-check-input" type="radio" name="undergradUK" id="undergradUKPreferNot" value="preferNot">
-                    <label class="form-check-label" for="undergradUKPreferNot">Prefer not to say</label>
-                </div>
-            </div>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <td colspan="3">
+                            <b>What were your main sources of funding for your living costs during your undergraduate degree? (Please indicate all sources contributing at least £1,000 per year)</b>
+                        </td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="govLoan">
+                                <label class="form-check-label" for="govLoan">Government grant/loan</label>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="parentFinancial">
+                                <label class="form-check-label" for="parentFinancial">Parent/guardian financial assistance</label>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="preferNotFunding">
+                                <label class="form-check-label" for="preferNotFunding">Prefer not to say</label>
+                            </div>
+                        </td>
+                    </tr>
+                    
+                    <tr>
+                        <td>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="termTimeWork">
+                                <label class="form-check-label" for="termTimeWork">Term-time working</label>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="scholarship">
+                                <label class="form-check-label" for="scholarship">Scholarship</label>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="otherFunding">
+                                <label class="form-check-label" for="otherFunding">Other - specify below</label>
+                            </div>
+                        </td>
+                    </tr>
 
-            <div class="form-group">
-                <label>If yes, did you take out a student loan for all or part of your undergraduate degree?</label>
-                <div class="form-check">
-                    <input class="form-check-input" type="radio" name="studentLoan" id="studentLoanYes" value="yes">
-                    <label class="form-check-label" for="studentLoanYes">Yes</label>
-                </div>
-                <div class="form-check">
-                    <input class="form-check-input" type="radio" name="studentLoan" id="studentLoanNo" value="no">
-                    <label class.form-check-label" for="studentLoanNo">No</label>
-                </div>
-                <div class="form-check">
-                    <input class="form-check-input" type="radio" name="studentLoan" id="studentLoanPreferNot" value="preferNot">
-                    <label class="form-check-label" for="studentLoanPreferNot">Prefer not to say</label>
-                </div>
-            </div>
+                    <tr>
+                        <td>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="personalSavings">
+                                <label class="form-check-label" for="personalSavings">Personal savings</label>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="uniBursary">
+                                <label class="form-check-label" for="uniBursary">Needs-based University bursary</label>
+                            </div>
+                        </td>
+                        <td>
+                            <input type="text" class="form-control" id="otherFundingDetails" placeholder="Specify other funding sources">
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
 
-            <div class="form-group">
-                <label>If your undergraduate degree was in the UK, did you qualify for (income-assessed) UK government support for your undergraduate degree when you applied to your regional funding agency? (eg Student Finance England, Student Awards Agency for Scotland) (If you entered university before August 2016 and received a maintenance grant (not a maintenance loan), then please tick yes. If you entered university after August 2016, was your household income assessed as £40,000 or less (which will be stated in the letter from your student finance agency).</label>
-                <div class="form-check">
-                    <input class="form-check-input" type="radio" name="govSupport" id="govSupportYes" value="yes">
-                    <label class="form-check-label" for="govSupportYes">Yes</label>
-                </div>
-                <div class="form-check">
-                    <input class="form-check-input" type="radio" name="govSupport" id="govSupportNo" value="no">
-                    <label class="form-check-label" for="govSupportNo">No</label>
-                </div>
-                <div class="form-check">
-                    <input class="form-check-input" type="radio" name="govSupport" id="govSupportPreferNot" value="preferNot">
-                    <label class="form-check-label" for="govSupportPreferNot">Prefer not to say</label>
-                </div>
-            </div>
-			            <div class="form-group">
-                <label>What were your main sources of funding for your living costs during your undergraduate degree? (Please indicate all sources contributing at least £1,000 per year)</label>
-                <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="" id="govLoan">
-                    <label class="form-check-label" for="govLoan">Government grant/loan</label>
-                </div>
-                <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="" id="termTimeWork">
-                    <label class="form-check-label" for="termTimeWork">Term-time working</label>
-                </div>
-                <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="" id="personalSavings">
-                    <label class="form-check-label" for="personalSavings">Personal savings</label>
-                </div>
-                <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="" id="parentFinancial">
-                    <label class="form-check-label" for="parentFinancial">Parent/guardian financial assistance</label>
-                </div>
-                <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="" id="scholarship">
-                    <label class="form-check-label" for="scholarship">Scholarship</label>
-                </div>
-                <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="" id="uniBursary">
-                    <label class="form-check-label" for="uniBursary">Needs-based University bursary</label>
-                </div>
-                <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="" id="preferNotFunding">
-                    <label class="form-check-label" for="preferNotFunding">Prefer not to say</label>
-                </div>
-                <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="" id="otherFunding">
-                    <label class="form-check-label" for="otherFunding">Other - specify below</label>
-                </div>
-                <input type="text" class="form-control" id="otherFundingDetails" placeholder="Specify other funding sources">
-            </div>
+            <br>
 
             <div class="form-group">
                 <label>Have you spent more than three months in the care of your state or local authority (including foster care, kinship care, residential care or similar government-sponsored care schemes)? (Being in care means looked after by the state or state-appointed guardians for an extended period rather than by your parents, other relatives or guardians)</label>
                 <div class="form-check">
                     <input class="form-check-input" type="radio" name="stateCare" id="stateCareYes" value="yes">
-                    <label class="form-check-label" for="stateCareYes">Yes</label>
+                    <label class="form-check-label nobold" for="stateCareYes">Yes</label>
                 </div>
                 <div class="form-check">
                     <input class="form-check-input" type="radio" name="stateCare" id="stateCareNo" value="no">
-                    <label class="form-check-label" for="stateCareNo">No</label>
+                    <label class="form-check-label nobold" for="stateCareNo">No</label>
                 </div>
                 <div class="form-check">
                     <input class="form-check-input" type="radio" name="stateCare" id="stateCarePreferNot" value="preferNot">
-                    <label class="form-check-label" for="stateCarePreferNot">Prefer not to say</label>
+                    <label class="form-check-label nobold" for="stateCarePreferNot">Prefer not to say</label>
                 </div>
             </div>
         </fieldset>
-		
-		<fieldset class="form-section">
-            <h4>Section 3: Disability</h4>
-
-            <p>We welcome applications from disabled people. Please tell us if you have a disability, including sensory or mobility impairments, long-term mental health conditions, longstanding illnesses or health conditions, autism spectrum conditions, or specific learning difficulties such as dyslexia, dyspraxia and ADHD, so that we can tell you about what study support is available if you are offered a place here.</p>
-
-            <p>We will not take this information into account when assessing your application, which will be judged on academic merit and potential alone. Your personal information will be treated in accordance with the General Data Protection Regulation (GDPR) and related UK data protection legislation. Full details are set out in the University's Postgraduate Applicant Privacy Policy (<a href="https://compliance.admin.ox.ac.uk/postgraduate-applicant-privacy-policy" target="_blank">https://compliance.admin.ox.ac.uk/postgraduate-applicant-privacy-policy</a>).</p>
-
-            <p>If you accept a place here, we will need to share this information with key individuals in academic, administrative and support roles in order to provide effective support. This will mean sharing your information with our Disability Advisory Service so that they may work with you to put in place any necessary adjustments or provide study support.</p>
-
-            <p>You should contact the Disability Advisory Service (<a href="www.ox.ac.uk/students/welfare/disability" target="_blank">www.ox.ac.uk/students/welfare/disability</a>) as soon as possible if you wish to discuss this section, or anything to do with provision for disability-related support for your course.</p>
-			
-			            <p>Please select all that apply.</p>
-
-            <div class="form-check">
-                <input class="form-check-input" type="checkbox" value="" id="noDisability">
-                <label class="form-check-label" for="noDisability">No known disability</label>
-            </div>
-            <div class="form-check">
-                <input class="form-check-input" type="checkbox" value="" id="preferNotDisability">
-                <label class="form-check-label" for="preferNotDisability">Prefer not to say</label>
-            </div>
-            <div class="form-check">
-                <input class="form-check-input" type="checkbox" value="" id="learningDifficulty">
-                <label class="form-check-label" for="learningDifficulty">A specific learning difficulty such as dyslexia, dyspraxia or ADHD</label>
-            </div>
-            <div class="form-check">
-                <input class="form-check-input" type="checkbox" value="" id="communicationImpairment">
-                <label class="form-check-label" for="communicationImpairment">A social/communication impairment such as an autism spectrum condition or disorder</label>
-            </div>
-            <div class="form-check">
-                <input class="form-check-input" type="checkbox" value="" id="longstandingIllness">
-                <label class="form-check-label" for="longstandingIllness">A longstanding illness or health condition such as epilepsy, diabetes, Crohn's disease, or asthma</label>
-            </div>
-            <div class="form-check">
-                <input class="form-check-input" type="checkbox" value="" id="mentalHealthCondition">
-                <label class="form-check-label" for="mentalHealthCondition">A long-term mental health condition, such as bipolar disorder, obsessive compulsive disorder, an eating disorder, depression, an anxiety disorder, or schizophrenia</label>
-            </div>
-            <div class="form-check">
-                <input class="form-check-input" type="checkbox" value="" id="physicalImpairment">
-                <label class="form-check-label" for="physicalImpairment">A physical impairment or mobility issues, such as difficulty using arms or hands, or requiring use of a wheelchair, crutches or other mobility aid</label>
-            </div>
-            <div class="form-check">
-                <input class="form-check-input" type="checkbox" value="" id="hearingImpairment">
-                <label class="form-check-label" for="hearingImpairment">Deaf or a hearing impairment</label>
-            </div>
-            <div class="form-check">
-                <input class="form-check-input" type="checkbox" value="" id="visualImpairment">
-                <label class="form-check-label" for="visualImpairment">Blind or a serious visual impairment uncorrected by glasses</label>
-            </div>
-            <div class="form-check">
-                <input class="form-check-input" type="checkbox" value="" id="otherDisability">
-                <label class="form-check-label" for="otherDisability">A disability, impairment or medical condition that is not listed</label>
-            </div>
-            <div class="form-group">
-                <label for="otherDisabilityDetails">If not listed, please specify</label>
-                <textarea class="form-control" id="otherDisabilityDetails" rows="3"></textarea>
-            </div>
-
-            <p>If you have selected a disability above - Do you have any additional support needs?</p>
-
-            <div class="form-check">
-                <input class="form-check-input" type="checkbox" value="" id="wheelchair">
-                <label class="form-check-label" for="wheelchair">Require use of a wheelchair or other mobility aid</label>
-            </div>
-            <div class="form-check">
-                <input class="form-check-input" type="checkbox" value="" id="livingAccommodation">
-                <label class="form-check-label" for="livingAccommodation">Require living accommodation with specialist equipment (eg. hoists, height-adjustable beds, adapted bathroom facilities)</label>
-            </div>
-            <div class="form-check">
-                <input class="form-check-input" type="checkbox" value="" id="stepFreeAccess">
-                <label class="form-check-label" for="stepFreeAccess">Require step-free/level access or use of a lift</label>
-            </div>
-            <div class="form-check">
-                <input class="form-check-input" type="checkbox" value="" id="assistanceAnimal">
-                <label class="form-check-label" for="assistanceAnimal">Require use of a registered/licensed assistance animal for visual, hearing, mobility, or medical needs</label>
-            </div>
-            <div class="form-check">
-                <input class="form-check-input" type="checkbox" value="" id="personalCare">
-                <label class="form-check-label" for="personalCare">Require personal care assistance for daily living activities</label>
-            </div>
-            <div class="form-check">
-                <input class="form-check-input" type="checkbox" value="" id="communicationAids">
-                <label class="form-check-label" for="communicationAids">Require use of communication aids (eg. BSL interpreter, hearing support system)</label>
-            </div>
-			</fieldset>
-			
-			<fieldset class="form-section">
-				<legend>Appendix B: Postgraduate Applicant Privacy Policy</legend>
-
-				<h4>1. What is the purpose of this document?</h4>
-				<p>The University of Oxford is committed to protecting the privacy and security of your personal information ('personal data'). This privacy policy describes how we collect and use your personal data during the application process, both before and after you submit your application, in accordance with the General Data Protection Regulation (GDPR) and related UK data protection legislation.</p>
-				<p>This policy applies to prospective postgraduate students. In addition, each college[1] will have its own privacy notice. It is important that you read this policy, together with any other privacy policy we may provide on specific occasions when we are collecting or processing information about you, so that you are aware of how and why we are using the information. We may update this policy at any time.</p>
-				<p>[1] 'College' means any college or Permanent Private Hall, including Ripon College, Cuddesdon.</p>
-
-				<h4>2. Glossary</h4>
-				<p>Where we refer in this policy to your 'personal data', we mean any recorded information that is about you and from which you can be identified. It does not include data where your identity has been removed (anonymous data).</p>
-				<p>Where we refer to the 'processing' of your personal data, we mean anything that we do with that information, including collection, use, storage, disclosure, deletion or retention.</p>
-
-				<h4>3. Who is using your personal data?</h4>
-				<p>The University of Oxford[2] is the "data controller" for the information that we obtain from you or others as a result of your application for graduate study. This means that we decide how to use it and are responsible for looking after it in accordance with the GDPR.</p>
-				<p>Access to your data will be provided to the staff, including those based in the University's colleges[1], who need to view it as part of their work in carrying out the purposes set out in Section 6. We also share it with the third parties described in section 8.</p>
-				<p>[2] The University's legal title is the Chancellor, Masters and Scholars of the University of Oxford.</p>
-				
-				<h4>4. The types of data we hold about you</h4>
-				<p>The information we hold about you may include the following:</p>
-				<ul>
-					<li>Personal details such as name, title, address, telephone number, email address, date of birth, sex and gender identity, ID photograph (including within received documents), marital status, information about household income, and details of dependants;</li>
-					<li>Education and employment information (including the school(s), sixth form college(s) and other colleges or universities you have attended and places where you have worked, the courses you have completed, dates of study and examination results);</li>
-					<li>Other personal background information collected during the admissions process, e.g. whether you have been in care, your socio-economic classification and details of your parents' occupation and education;</li>
-					<li>Information about your use of our IT systems;</li>
-					<li>Visa, passport and immigration information;</li>
-					<li>Funding and financial support information;</li>
-					<li>Your feedback on the application process and university services collected through surveys such as (but not limited to) those sent to applicants and offer-holders;</li>
-					<li>Attendance records at University-organised recruitment events, and photographic data of such events captured for the purpose of live streaming and/or future publicity materials; and</li>
-					<li>Information about your use of our information and communications systems, including your communication preferences and website interaction (cookies and similar technologies).</li>
-					<li>Information about your socio-economic background</li>
-				</ul>
-
-				<p>We may also process the following "special categories" of more sensitive personal data:</p>
-				<ul>
-					<li>Information about your race or ethnicity, sexual orientation and religious beliefs;</li>
-					<li>Information about your health, including any disability and/or medical condition;</li>
-					<li>Information about criminal convictions and offences (if applicable to your course).</li>
-				</ul>
-
-				<p>Special category data will not be available to those assessing your application and will only be used in accordance with section 7.</p>
-
-				<h4>5. How did the University obtain your data?</h4>
-	
-				<p class="section-content">
-					We collect the vast majority of the information directly from you, such as during your registration to use our online application form, through the application process and after you submit your application. We may also collect additional information from third parties, including referees, former schools, colleges and universities, and government departments and agencies.
-				</p>
-
-				<h4 class="section-title">6. How the University uses your data</h4>
-				<p class="section-content">
-					Before you submit your application, we process your data in order to data for the purpose of processing and assessing your application for study, and for purposes related to your application, such as assessing your eligibility for funding and your financial status.
-				</p>
-
-				<p class="section-content">
-					We set out below those circumstances where it is necessary for us to process your data. (These circumstances are not mutually exclusive; we may use the same information under more than one heading.)
-				</p>
-
-				<h4 class="section-title">6.1 Because we have a contractual obligation to consider your application</h4>
-				<p class="section-content">
-					Information processed for this purpose includes the data listed in section 4 above.
-				</p>
-				<p class="section-content">
-					We also need to process data under this heading where the University is working with a third party in order to offer you services, for example, those offered by colleges, sponsors (such as research councils), other universities or scholarship benefactors. See section 8 for a fuller list of examples of third party sharing.
-				</p>
-
-				<h4 class="section-title">6.2 Where we need to comply with a legal obligation</h4>
-				<p class="section-content">
-					Information processed for this purpose includes, but is not limited to, information relating to the monitoring of equal opportunities. We are also required by law to provide data to various Government departments through the <a href="#">Higher Education Statistics Agency (HESA)</a>.
-				</p>
-
-				<h4 class="section-title">6.3 Where it is necessary to meet our legitimate interests</h4>
-				<p class="section-content">
-					We also need to process your data in order to meet our legitimate interests or the legitimate interests of others. Examples include, but are not limited to, the following:
-					<ul>
-						<li>sending you communications containing information on how to complete your application;</li>
-						<li>inviting you to take part in applicant surveys or enabling third parties to conduct applicant surveys on our behalf;</li>
-						<li>notifying you of changes to course information.</li>
-					</ul>
-				</p>
-			</div>
-			
-			<div class="container">
-				<h4 class="section-title">6.4 Where we have your consent</h4>
-				<p class="section-content">
-					There may be situations where we ask for your consent to process your data, for example, the socio-economic questions in the application form and pre-application communications for student recruitment purposes (you will always be able to opt out of receiving such communications).
-				</p>
-
-				<h4 class="section-title">If you fail to provide personal information under 6.1 or 6.2 above</h4>
-				<p class="section-content">
-					If you fail to provide certain information when requested under the circumstances described in 6.1 and 6.2 above, we may not be able to meet our contractual obligation to consider your application or to comply with our other legal obligations.
-				</p>
-
-				<h4 class="section-title">Change of purpose</h4>
-				<p class="section-content">
-					We will only process your personal data for the purposes for which we collected it, unless we reasonably consider that we need to use it for another related reason and that reason is compatible with the original purpose. If we need to use your data for an unrelated purpose, we will seek your consent to use it for that new purpose.
-				</p>
-				<p class="section-content">
-					Please note that we may process your data without your knowledge or consent where this is required or permitted by law.</p>
-				<h4 class="section-title">7. Special category data and criminal conviction data</h4>
-				<p>Special category data and criminal conviction data require a higher level of protection. Listed below are examples of processing activities that we regularly undertake in respect of these types of data. In addition to the activities listed below, it may sometimes be necessary to process this sort of information for exceptional reasons, for example, because it is necessary to protect your vital interests or those of another person. We may also process your special category data to identify your eligibility for certain scholarships (e.g. female only STEM scholarships).</p>
-				<h4 class="section-title">7.1 Disability</h4>
-				<p>We will process data about any disability in order to make any arrangements or adjustments required in relation to your application (e.g. to arrange access for interviews) and/or to monitor equal opportunities. This processing is necessary to meet our legal obligations.</p>
-				<h4 class="section-title">7.2 Criminal conduct</h4>
-				<p>Data about certain unspent criminal convictions, including whether or not you have such a conviction, is gathered during the process of applying for a course with us once you have been offered a place. Data about barring decisions will only be collected if you have applied for and been accepted onto certain courses, and where we are legally required to do so. Processing of this nature is carried out in order to protect our legitimate interests including to protect members of the University community from a foreseeable risk of harm. For certain courses this processing is also necessary to meet our legal obligations. Such processing will be subject to suitable safeguards.</p>
-				<h4 class="section-title">7.3 Racial or ethnic origin, sexual orientation and religious belief</h4>
-				<p>Data about your racial and ethnic origin, religious belief or sexual orientation will only be processed where you have volunteered it, in order to identify your eligibility for certain scholarships in accordance with our legitimate interests, and where we need to process it in order to meet our statutory obligations under equalities and other legislation. This processing is considered to meet a substantial public interest. </p>
-				<h4 class="section-title">8. Data sharing with third parties</h4>
-				<p>In order to perform our contractual and other legal responsibilities or purposes, we may, need to share your information with the following types of organisation:</p>
-				<ol>
-					<li>Colleges;</li>
-					<li>External organisations providing services to us, for example our enquiry management and plagiarism detection system;</li>
-					<li>External organisations offering University-sponsored services including student surveys;</li>
-					<li>The governmental departments or agencies responsible for immigration and student loans;</li>
-					<li>Third parties including your former employer(s) or educational establishment(s) to obtain a reference or to verify the accuracy of a reference or other information you have submitted with or in support of your application;</li>
-					<li>If you have or are seeking a particular relationship with a third party, for example, because of an exchange scheme;</li>
-					<li>Sponsors or benefactors of funding and financial support;</li>
-					<li>Other Higher Education institutions as part of formal partnerships.</li>
-					<li>Where information is shared with third parties, we will seek to share the minimum amount necessary.</li>
-				</ol>
-				<p>All third-party service providers that process data on our behalf are required to take appropriate security measures to protect your data in line with our policies. We do not allow them to use your data for their own purposes. We permit them to process your data only for specified purposes and in accordance with our instructions.</p>
-				
-				<h4 class="section-title">9. Transfer of your data outside of the European Economic Area (EEA)[3]</h4>
-				<p class="section-content">
-					There may be occasions when we transfer your data outside the EEA, for example, to obtain a reference or to verify information in your application. Such transfers will only take place if one of the following applies:
-					<ul>
-						<li>the country receiving the data is considered by the EU to provide an adequate level of data protection;</li>
-						<li>the organisation receiving the data is covered by an arrangement recognised by the EU as providing an adequate standard of data protection e.g. transfers to companies that are certified under the EU-US Privacy Shield; the transfer has your consent;</li>
-						<li>the transfer is necessary for the performance of a contract with you or to take steps requested by you prior to entering into that contract; or</li>
-						<li>the transfer is governed by approved contractual clauses.</li>
-					</ul>
-				</p>
-				<p class="section-content">
-					[3] The EU plus Norway, Liechtenstein and Iceland.
-				</p>
-
-				<h4 class="section-title">10. Retention Period</h4>
-				<p class="section-content">
-					We will retain your data only for as long as we need it to meet our purposes, including any relating to legal, accounting, or reporting requirements. Details of the retention periods for different types of student data are available at <a href="https://compliance.admin.ox.ac.uk/">https://compliance.admin.ox.ac.uk/</a>.
-				</p>
-				<p class="section-content">
-					If you enrol as a student, your data will be processed in accordance with our student privacy policy which is available at <a href="https://compliance.admin.ox.ac.uk/student-privacy-policy">https://compliance.admin.ox.ac.uk/student-privacy-policy</a>.
-				</p>
-
-				<h4 class="section-title">11. Your rights</h4>
-				<p class="section-content">
-					Under certain circumstances, by law you have the right to:
-					<ul>
-						<li><strong>Request access to your data</strong> (commonly known as a "subject access request"). This enables you to receive a copy of your data and to check that we are lawfully processing it.</li>
-						<li><strong>Request correction of your data.</strong> This enables you to ask us to correct any incomplete or inaccurate data we hold about you.</li>
-						<li><strong>Request erasure of your data.</strong> This enables you to ask us to delete or remove your data in certain circumstances, for example, if you consider that there is no good reason for us continuing to process it. You also have the right to ask us to delete or remove your data where you have exercised your right to object to processing (see below).</li>
-						<li><strong>Object to processing of your data</strong> where we are relying on our legitimate interests (or those of a third party) and there is something about your particular situation which makes you want to object to processing on this ground. You also have the right to object where we are processing your data for direct marketing purposes.</li>
-						<li><strong>Request the restriction of processing of your data.</strong> This enables you to ask us to suspend the processing of your data, for example if you want us to establish its accuracy or the reason for processing it.</li>
-						<li><strong>Request the transfer of your data to another party.</strong></li>
-					</ul>
-				</p>
-				<p class="section-content">
-					Depending on the circumstances and the nature of your request it may not be possible for us to do what you have asked, for example, where there is a statutory or contractual requirement for us to process your data and it would not be possible to fulfil our legal obligations if we were to stop. However, where you have consented to the processing (for example, where you have asked us to send you certain types of communication), you can withdraw your consent at any time, by emailing us at graduate.admissions@admin.ox.ac.uk. In this event, we will stop the processing as soon as we can. If you choose to withdraw consent it will not invalidate past processing and it may impact our ability to provide particular additional services to you. Further information on your rights is available from the Information Commissioner’s Office(ICO) https://ico.org.uk/ . If you want to exercise any of the rights described above or are dissatisfied with the way we have used your information, please contact the University’s Information Compliance Team at data.protection@admin.ox.ac.uk. The same address can be used to contact the University’s Data Protection Officer. We will seek to deal with your request without undue delay, and in any event in accordance with the requirements of the GDPR. Please note that we may keep a record of your communications to help us resolve any issues which you raise. If you remain dissatisfied, you have the right to lodge a complaint with the ICO at https://ico.org.uk/concerns/.
-				</p>
-				<h4 class="section-title">12. Keeping your data up-to-date</h4>
-				<p>It is important that the data we hold about you is accurate and current. You can access, amend and delete your data yourself until the point at which you submit your application to the University. Please keep us informed of any changes after you submit your application.</p>
-				<h4 class="section-title">13. Changes to this privacy policy</h4>
-				<p>We reserve the right to update this privacy policy at any time, and will seek to inform you of substantial updates. We may also notify you in other ways from time to time about the processing of your personal data.</p>
-			</fieldset>
-		
-		<button type="submit" class="btn btn-dark w-100">SUBMIT APPLICATION</button>
+        
+        <div class="nav-btn">
+            <input class="btn btn-warning" type="reset" value="Reset">
+            <a href="piksection2.html" class="btn btn-primary">Continue to Next Section</a>
+        </div>
     </form>
-
-
 </body>
 </html>
